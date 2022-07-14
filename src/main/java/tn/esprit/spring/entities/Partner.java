@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -35,6 +36,9 @@ public class Partner implements Serializable {
 	private String password;
 	
 	private boolean actif;
+	
+	@OneToMany
+	private List<Trip> Trips;
 	
 	@Enumerated(EnumType.STRING)
 	private Role role;

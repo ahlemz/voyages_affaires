@@ -1,4 +1,4 @@
-package tn.esprit.spring.entities;
+ package tn.esprit.spring.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,6 +29,9 @@ public class Forum implements Serializable {
 	
 	@Column(name="description")
 	private String description;
+	
+	@ManyToOne
+	private Trip trip;
 	
 	public Forum() {
 	
