@@ -1,0 +1,105 @@
+2022-07-14 14:02:13.518  INFO 25852 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 17.0.1 on DESKTOP-2IABE62 with PID 25852 (C:\Users\uber\Desktop\voyages_affaires\target\classes started by uber in C:\Users\uber\Desktop\voyages_affaires)
+2022-07-14 14:02:13.533  INFO 25852 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:02:17.170  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 14:02:17.171  INFO 25852 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 14:02:17.373  INFO 25852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 14:02:17.743  INFO 25852 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:02:17.845  INFO 25852 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:02:18.463  INFO 25852 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:02:19.075  INFO 25852 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-14 14:02:21.348  INFO 25852 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:02:22.350  WARN 25852 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:02:23.222  WARN 25852 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-07-14 14:02:23.251  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-14 14:02:23.352 ERROR 25852 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-07-14 14:02:36.178  INFO 12292 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 17.0.1 on DESKTOP-2IABE62 with PID 12292 (C:\Users\uber\Desktop\voyages_affaires\target\classes started by uber in C:\Users\uber\Desktop\voyages_affaires)
+2022-07-14 14:02:36.179  INFO 12292 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:02:38.315  INFO 12292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 14:02:38.316  INFO 12292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 14:02:38.451  INFO 12292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 14:02:38.860  INFO 12292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:02:38.938  INFO 12292 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:02:39.188  INFO 12292 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:02:39.646  INFO 12292 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-14 14:02:40.794  INFO 12292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:02:41.228  WARN 12292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:02:41.707  WARN 12292 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-07-14 14:02:41.735  INFO 12292 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-14 14:02:41.807 ERROR 12292 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-07-14 14:03:22.484  INFO 9168 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 17.0.1 on DESKTOP-2IABE62 with PID 9168 (C:\Users\uber\Desktop\voyages_affaires\target\classes started by uber in C:\Users\uber\Desktop\voyages_affaires)
+2022-07-14 14:03:22.485  INFO 9168 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:03:25.094  INFO 9168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 14:03:25.095  INFO 9168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 14:03:25.283  INFO 9168 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 14:03:25.634  INFO 9168 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:03:25.694  INFO 9168 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:03:25.874  INFO 9168 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:03:26.385  INFO 9168 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-14 14:03:27.800  INFO 9168 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:03:28.343  WARN 9168 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:03:28.941  WARN 9168 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-07-14 14:03:28.964  INFO 9168 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-14 14:03:29.006 ERROR 9168 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-07-14 14:03:43.963  INFO 8396 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 17.0.1 on DESKTOP-2IABE62 with PID 8396 (C:\Users\uber\Desktop\voyages_affaires\target\classes started by uber in C:\Users\uber\Desktop\voyages_affaires)
+2022-07-14 14:03:43.966  INFO 8396 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:03:46.878  INFO 8396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 14:03:46.879  INFO 8396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 14:03:47.080  INFO 8396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 14:03:47.508  INFO 8396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:03:47.629  INFO 8396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:03:48.046  INFO 8396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:03:48.655  INFO 8396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-14 14:03:50.408  INFO 8396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:03:51.066  WARN 8396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:03:51.966  INFO 8396 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 8.895 seconds (JVM running for 10.05)
+2022-07-14 14:04:32.353  INFO 6020 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 17.0.1 on DESKTOP-2IABE62 with PID 6020 (C:\Users\uber\Desktop\voyages_affaires\target\classes started by uber in C:\Users\uber\Desktop\voyages_affaires)
+2022-07-14 14:04:32.355  INFO 6020 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:04:34.461  INFO 6020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 14:04:34.462  INFO 6020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 14:04:34.592  INFO 6020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 14:04:34.813  INFO 6020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:04:34.866  INFO 6020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:04:35.042  INFO 6020 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:04:35.354  INFO 6020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-14 14:04:36.430  INFO 6020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:04:37.037  WARN 6020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:04:37.641  INFO 6020 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 5.827 seconds (JVM running for 7.602)
