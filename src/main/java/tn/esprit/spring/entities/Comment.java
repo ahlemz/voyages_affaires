@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "T_COMMENTS")
-public class Comments implements Serializable {
+public class Comment implements Serializable {
 	
 
 
@@ -42,16 +42,16 @@ public class Comments implements Serializable {
 	private String comment;
 	
 	
-	@OneToMany(mappedBy="comments", 
+	@OneToMany(mappedBy="comment", 
 	cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, 
 	fetch=FetchType.EAGER)
-private List<Comments> comments = new ArrayList<>(); 
+private List<Comment> comments = new ArrayList<>(); 
 
 	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, 
 			fetch=FetchType.EAGER)
-			private Posts posts; 
+			private Post post; 
 	
-	public Comments() {
+	public Comment() {
 	
 	}
 
