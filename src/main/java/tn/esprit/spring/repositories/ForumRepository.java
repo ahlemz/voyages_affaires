@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import tn.esprit.spring.entities.Forum;
 
 @Repository
-public interface ForumRepository extends CrudRepository<Forum, Long> {
 
+public interface ForumRepository extends CrudRepository<Forum, Long> {
+	
 }
