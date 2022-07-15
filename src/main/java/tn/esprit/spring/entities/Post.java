@@ -18,14 +18,14 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "T_POSTS")
-public class Posts implements Serializable {
+@Table(name = "T_POST")
+public class Post implements Serializable {
 	
 	private static final long serialVersionUID = 6191889143079517027L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id_posts;
+	private Long id_post;
 	
 	@Temporal(TemporalType.DATE)
 	private Date datePost;
@@ -49,11 +49,11 @@ public class Posts implements Serializable {
 	}
 
 	
-	public Posts() {
+	public Post() {
 	
 	}
 	
-	public Posts(Date datePost) {
+	public Post(Date datePost) {
 		this.datePost = datePost;
 	
 	}
@@ -76,7 +76,7 @@ public class Posts implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Posts [id_posts=" + id_posts + ", datePost=" + datePost + ", content=" + content + ", title=" + title
+		return "Posts [id_post=" + id_post + ", datePost=" + datePost + ", content=" + content + ", title=" + title
 				+ ", getTitle()=" + getTitle() + ", getDatePost()=" + getDatePost() + ", getContent()=" + getContent()
 				+ "]";
 	}
