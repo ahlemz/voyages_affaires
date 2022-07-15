@@ -1,12 +1,16 @@
 package tn.esprit.spring.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
+import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.repositories.UserRepository;
 import tn.esprit.spring.services.IUserService;
@@ -86,6 +90,28 @@ public class UserServiceImpl implements IUserService {
 			l.error("Out of Method retrieveUser with Errors: " + e);
 		}
 		return user;
+	}
+	
+	private List<GrantedAuthority> getGrantedAuthorities(User user) {
+		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+		Role role = user.getRole();
+		authorities.add(new SimpleGrantedAuthority(role.toString()));
+		return authorities;
+	}
+
+	@Override
+	public User loadUserByUsername(String username) {
+		if (username.trim().isEmpty()) {
+			System.out.println("username is empty");
+		}
+ 
+		User user = userRepository.findByUsernameOrEmail(username);
+ 
+		if (user == null) {
+			System.out.println("User " + username + " not found"); 
+		}
+		
+		return new User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user));
 	}
 
 }
