@@ -1,164 +1,77 @@
 package tn.esprit.spring.entities;
 
-import java.io.Serializable;
-import java.util.List;
+//import com.udemy.flightReservation.entity.common.AbstractEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
- 
 @Entity
-@Table(name = "T_EMPLOYE")
-public class Trip implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class Trip {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	
-	private String prenom;
-	
-	private String nom;
-		 
-	private String email;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+	private String tripNumber;
+    private String operatingAirlines;
+    private String departureCity;
+    private String arrivalCity;
+    private LocalDate dateOfDeparture;
 
-	private String password;
-	
-	private boolean actif;
-	
-	@Enumerated(EnumType.STRING)
-	private Role role;
-	 
-	/*@JsonIgnore
-	@ManyToMany(mappedBy="employes" )
-	private List<Departement> departements;
-	
-	@OneToOne
-	private Contrat contrat; 
-	*/
-	public Trip() {
-		super();
-	}
-	
-	public Trip(Long id, String prenom, String nom, String email, String password, boolean actif, Role role) {
-		super();
-		this.id = id;
-		this.prenom = prenom;
-		this.nom = nom;
-		this.email = email;
-		this.password = password;
-		this.actif = actif;
-		this.role = role;
-	}
+    public Trip() {
+
+    }
 
 
 
-	public Trip(String nom, String prenom, String email, String password, boolean actif, Role role) {
-		this.nom = nom;
-		this.prenom = prenom;
-		this.email = email;
-		this.password = password;
-		this.actif = actif;
-		this.role = role;
-	}
-	
-	public Trip(String nom, String prenom, String email, boolean actif, Role role) {
-		this.nom = nom;
-		this.prenom = prenom;
-		this.email = email;
-		this.actif = actif;
-		this.role = role;
-	} 
- 
-	public String getPrenom() {
-		return prenom;
-	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-	 
-	public String getPassword() {
-		return password;
-	}
- 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public boolean isActif() {
-		return actif;
-	}
-
-
-	public void setActif(boolean actif) {
-		this.actif = actif;
-	}
-
-
-	public Role getRole() {
-		return role;
-	}
-
-	public void setRole(Role role) {
-		this.role = role;
-	}
-
-/*	public List<Departement> getDepartements() {
-		return departements;
-	}
-
-	public void setDepartements(List<Departement> departement) {
-		this.departements = departement;
-	}*/
-
-	/*public Contrat getContrat() {
-		return contrat;
-	}
-
-	public void setContrat(Contrat contrat) {
-		this.contrat = contrat;
-	} 
-*/
-	public Long getId() {
+    public Long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
-	@Override
-	public String toString() {
-		return "Employe [id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", email=" + email + ", password="
-				+ password + ", actif=" + actif + ", role=" + role + "]";
-	}
-	 
+
+	public String getTripNumber() {
+        return tripNumber;
+    }
+
+    public void setTripNumber(String tripNumber) {
+        this.tripNumber = tripNumber;
+    }
+
+    public String getOperatingAirlines() {
+        return operatingAirlines;
+    }
+
+    public void setOperatingAirlines(String operatingAirlines) {
+        this.operatingAirlines = operatingAirlines;
+    }
+
+    public String getDepartureCity() {
+        return departureCity;
+    }
+
+    public void setDepartureCity(String departureCity) {
+        this.departureCity = departureCity;
+    }
+
+    public String getArrivalCity() {
+        return arrivalCity;
+    }
+
+    public void setArrivalCity(String arrivalCity) {
+        this.arrivalCity = arrivalCity;
+    }
+
+    public LocalDate getDateOfDeparture() {
+        return dateOfDeparture;
+    }
+
+    public void setDateOfDeparture(LocalDate dateOfDeparture) {
+        this.dateOfDeparture = dateOfDeparture;
+    }
+
+    
 }
- 
