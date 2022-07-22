@@ -1,43 +1,72 @@
-<<<<<<< HEAD
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Posts.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\controllers\EntrepriseRestController.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\repositories\EntrepriseRepository.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Appointment.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Forum.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Entreprise.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\repositories\EmployeRepository.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Comments.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\services\IEmployeService.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\services\IEntrepriseService.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\VoyageAffairesApplication.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\controllers\EmployeRestController.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Trip.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\EntrepriseServiceImpl.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Planning.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Invitation.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Reclamation.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Role.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Employe.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\EmployeServiceImpl.java
-C:\Users\uber\Desktop\voyages_affaires\src\main\java\tn\esprit\spring\entities\Partner.java
-=======
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Entreprise.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\services\IEmployeService.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\controllers\EmployeRestController.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\controllers\EntrepriseRestController.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\repositories\EmployeRepository.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Reclamation.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\services\IEntrepriseService.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Role.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Planning.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Trip.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\VoyageAffairesApplication.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\EmployeServiceImpl.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Appointment.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\EntrepriseServiceImpl.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Employe.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Invitation.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Forum.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\entities\Partner.java
-C:\Users\Adib\git\voyages_affaires\src\main\java\tn\esprit\spring\repositories\EntrepriseRepository.java
->>>>>>> branch 'main' of https://github.com/ahlemz/voyages_affaires.git
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\InvitationRespository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Appointment.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\MailService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\RefreshTokenRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Partner.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\PartnerRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\InvitationRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\RoleRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\LoginRequest.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\ReclamationServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\ICommentService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Comment.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\PlanningRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IEntrepriseService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Post.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\AuthEntryPointJwt.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\UserDetailsService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Invitation.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\WebSecurityConfig.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\batch\JobCompletionNotificationListener.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\AuthController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Reclamation.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\batch\BatchConfiguration.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\UserLoginFailureHandler.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IUserService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\VoyageAffairesApplication.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Forum.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\CommentRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\CommentServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\ForumServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Planning.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\PostRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\EntrepriseRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\JwtUtils.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Entreprise.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IReclamationService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\ReclamationRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\batch\BatchProcessingApplication.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\CommentRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\batch\InvitationItemProcessor.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Role.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\ReclamationRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\ERole.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\PostRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\NotificationController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\PostServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\RefreshToken.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\JwtResponse.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\Trip.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IInvitationService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\LoginController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\MessageResponse.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\ForumRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\UserRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\TripRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\UserDetailsServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\EntrepriseRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\UserLoginSuccessHandler.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\controllers\ForumRestController.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\entities\User.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\TokenRefreshResponse.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\repositories\UserRepository.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IForumService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\UserDetailsImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\AuthTokenFilter.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\security\Utility.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\UserServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\TokenRefreshException.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\payload\TokenRefreshRequest.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\IPostService.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\EntrepriseServiceImpl.java
+C:\Users\mzorai\OneDrive - Vermeg\Desktop\voyage_affaire\voyages_affaires\src\main\java\tn\esprit\spring\services\impl\InvitationServiceImpl.java
