@@ -49,13 +49,6 @@ public class ReservationRestController {
 
 	@PutMapping("/confirm-reservation/{reservation-id}")
 	public Reservation confirmReservation(@PathVariable("reservation-id") Long  reservationId) {
-		/*Reservation u_reservation = null;
-		reservation= reservationService.retrieveReservation(reservationId);
-		reservation.setConfirmed(true);
-		reservationRepository.save(reservation);*/
-		
-		
-		//return userService.updateUser(user);
 		
 		return reservationService.confirmReservation(reservationId);
 	}

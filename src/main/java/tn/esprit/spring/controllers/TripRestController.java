@@ -28,11 +28,6 @@ public class TripRestController {
 	@Autowired
 	private ITripService tripService;
 	
-	/*@GetMapping("/retrieve-all-trips")
-	public List<Trip> retrieveAllTrips() {
-		List<Trip> list = tripService.retrieveAllTrips();
-		return list;
-	}*/
 	
 	@GetMapping(value = "/retrieve-all-trips")
 	public ResponseEntity retrieveAllTrips() {

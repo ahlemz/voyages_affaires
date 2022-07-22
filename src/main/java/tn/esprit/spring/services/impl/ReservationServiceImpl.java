@@ -47,13 +47,6 @@ public class ReservationServiceImpl implements IReservationService {
 		reservation.setConfirmed(true);
 		r_update = reservationRepository.save(reservation);
 		return r_update;
-		/*Reservation u_reservation = new Reservation();
-		u_reservation = reservationRepository.findById(id).get();
-		u_reservation.setConfirmed(true);
-		reservationRepository.save(u_reservation);
-		
-		return u_reservation;*/
-		
 		
 	}
 
