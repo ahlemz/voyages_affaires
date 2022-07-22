@@ -9,7 +9,7 @@ public interface IForumService {
 	List<Forum> retrieveAllForums(); 
 	Forum addForum(Forum fo);
 	void deleteForum(Long id);
-	Forum updateForum(Forum fo);
+	Forum updateForum(Forum fo,Long id);
 	Forum retrieveForum(Long id);
 
 } 

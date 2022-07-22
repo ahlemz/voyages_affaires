@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entities.Post;
+import tn.esprit.spring.entities.Post;
+import tn.esprit.spring.services.IEmailService;
 import tn.esprit.spring.services.IPostService;
 
 @RestController
@@ -20,6 +22,7 @@ public class PostRestController {
 	
 	@Autowired
 	private IPostService postService;
+
 	
 	@GetMapping("/retrieve-all-posts")
 	public List<Post> retrieveAllPosts() {
@@ -39,13 +42,17 @@ public class PostRestController {
 	}
 
 	@DeleteMapping("/remove-post/{post-id}")
-	public void deletePost(@PathVariable("user-id") Long  postId) {
+	public void deletePost(@PathVariable("post-id") Long  postId) {
 		postService.deletePost(postId);
 	}
+	
 
-	@PutMapping("/update-post")
-	public Post updatePost(@RequestBody Post post) {
-		return postService.updatePost(post);
+	
+
+	
+	@PutMapping("/update-post/{post-id}")
+	public Post updatePost(@RequestBody Post post ,@PathVariable("post-id") Long  postId) {
+		return postService.updatePost(post, postId);
 	}
 	
 

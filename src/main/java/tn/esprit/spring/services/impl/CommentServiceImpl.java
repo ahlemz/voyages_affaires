@@ -43,18 +43,18 @@ public class CommentServiceImpl implements ICommentService{
 	}
 
 	@Override
-	public Comment addComment(Comment fo) {
+	public Comment addComment(Comment co) {
 		// TODO Auto-generated method stub
 		
 		Comment ent = null; 
 		
 		try {
 			l.info("Process started");
-			ent = commentRepository.save(fo); 
+			ent = commentRepository.save(co); 
 			l.info("Saved comment");
 			
 		} catch (Exception e) {
-			 l.error("error in addComment() : " + fo);
+			 l.error("error in addComment() : " + co);
 		}
 		
 		return ent; 
@@ -76,20 +76,23 @@ public class CommentServiceImpl implements ICommentService{
 	}
 
 	@Override
-	public Comment updateComment(Comment en) {
-		Comment commentUpdated = null; 
+	public Comment updateComment(Comment co, Long id) {
 		
+		Comment commentUpdated = null;
 		try {
 			l.info(" Process has started");
-			commentUpdated = commentRepository.save(en); 
+			Comment comment = commentRepository.findById(id).get();
+			//comment.setDescription(co.getDescription());
+			//comment.setDateDebut(fo.getDateDebut());
+		    commentUpdated = commentRepository.save(comment);
 			l.info("Comment updated");
-			
 		} catch (Exception e) {
-			l.error("error in updateComment() : " + e);
+			l.error("error in updateComment() : " + co);
 		}
 		
 		return commentUpdated; 
 	}
+
 
 	@Override
 	public Comment retrieveComment(Long id) {
@@ -109,4 +112,15 @@ public class CommentServiceImpl implements ICommentService{
 		return entr; 
 	}
 
+	public int retrieveNbrOfCommentsPerDay() {
+		int count = 0;
+		try {
+			l.info("Start process get number of comments today");
+			count = commentRepository.retrieveNbrOfCommentsPerDay();
+		} catch (Exception e) {
+			l.error("error in retrieveNbrOfCommentsPerDay() : " + e);
+		}
+		
+		return count; 
+	}
 }

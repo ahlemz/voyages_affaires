@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import tn.esprit.spring.entities.Forum;
 import tn.esprit.spring.services.IForumService;
 
@@ -23,14 +22,14 @@ public class ForumRestController {
 	
 	@GetMapping("/retrieve-all-forums")
 	public List<Forum> retrieveAllForums() {
-		List<Forum> list = forumService.retrieveAllForums();
-		return list;
+	 
+		return forumService.retrieveAllForums();
 	}
 
-	/*@GetMapping("/retrieve-forum/{forum-id}")
-	public Forum retrieveForum(@PathVariable("user-id") Long forumId) {
+	@GetMapping("/retrieve-forum/{forum-id}")
+	public Forum retrieveForum(@PathVariable("forum-id") Long forumId) {
 		return forumService.retrieveForum(forumId);
-	}*/
+	}
 
 	@PostMapping("/add-forum")
 	public Forum addForum(@RequestBody Forum fo) {
@@ -39,13 +38,13 @@ public class ForumRestController {
 	}
 
 	@DeleteMapping("/remove-forum/{forum-id}")
-	public void deleteForum(@PathVariable("user-id") Long  forumId) {
+	public void deleteForum(@PathVariable("forum-id") Long  forumId) {
 		forumService.deleteForum(forumId);
 	}
 
-	@PutMapping("/update-forum")
-	public Forum updateForum(@RequestBody Forum forum) {
-		return forumService.updateForum(forum);
+	@PutMapping("/update-forum/{forum-id}")
+	public Forum updateForum(@RequestBody Forum forum ,@PathVariable("forum-id") Long  forumId) {
+		return forumService.updateForum(forum, forumId);
 	}
 	
 

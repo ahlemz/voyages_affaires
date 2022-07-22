@@ -9,7 +9,7 @@ public interface IPostService {
 	List<Post> retrieveAllPosts(); 
 	Post addPost(Post po);
 	void deletePost(Long id);
-	Post updatePost(Post po);
+	Post updatePost(Post po,Long id);
 	Post retrievePost(Long id);
 
 } 

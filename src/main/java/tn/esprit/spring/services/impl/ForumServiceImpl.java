@@ -76,16 +76,18 @@ public class ForumServiceImpl implements IForumService{
 	}
 
 	@Override
-	public Forum updateForum(Forum en) {
-		Forum forumUpdated = null; 
+	public Forum updateForum(Forum fo, Long id) {
 		
+		Forum forumUpdated = null;
 		try {
 			l.info(" Process has started");
-			forumUpdated = forumRepository.save(en); 
+			Forum forum = forumRepository.findById(id).get();
+			forum.setDescription(fo.getDescription());
+			forum.setDateDebut(fo.getDateDebut());
+		    forumUpdated = forumRepository.save(forum);
 			l.info("Forum updated");
-			
 		} catch (Exception e) {
-			l.error("error in updateForum() : " + e);
+			l.error("error in updateForum() : " + fo);
 		}
 		
 		return forumUpdated; 

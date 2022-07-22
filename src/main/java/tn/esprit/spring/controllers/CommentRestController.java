@@ -31,21 +31,21 @@ public class CommentRestController {
 	public Comment retrieveComment(@PathVariable("user-id") Long commentId) {
 		return commentService.retrieveComment(commentId);
 	}
-
+	
 	@PostMapping("/add-comment")
-	public Comment addComment(@RequestBody Comment en) {
-		Comment comment = commentService.addComment(en);
+	public Comment addComment(@RequestBody Comment fo) {
+		Comment comment = commentService.addComment(fo);
 		return comment;
 	}
 
 	@DeleteMapping("/remove-comment/{comment-id}")
-	public void deleteComment(@PathVariable("user-id") Long  commentId) {
+	public void deleteComment(@PathVariable("comment-id") Long  commentId) {
 		commentService.deleteComment(commentId);
 	}
 
-	@PutMapping("/update-comment")
-	public Comment updateComment(@RequestBody Comment comment) {
-		return commentService.updateComment(comment);
+	@PutMapping("/update-comment/{comment-id}")
+	public Comment updateComment(@RequestBody Comment comment ,@PathVariable("comment-id") Long  commentId) {
+		return commentService.updateComment(comment, commentId);
 	}
 	
 
