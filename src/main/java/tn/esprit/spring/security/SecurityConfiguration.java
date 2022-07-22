@@ -36,11 +36,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/retrieve-all-trips","/retrieve-trip/*","/add-reservation","/retrieve-all-users").hasAnyRole("manager_role","admin_role")
-                .antMatchers("/add-trip","/cancel-trip/*","/retrieve-all-reservations","/cancel-reservation/*").hasRole("admin_role")
-                .antMatchers("/retrieve-reservation/*","/cancel-reservation/*","/confirm-reservation/*").hasRole("employee_role")
+                .antMatchers("/retrieve-all-trips","/retrieve-trip/*","/add-reservation","/retrieve-all-users","/sendMail").hasAnyRole("manager_role","admin_role")
+                .antMatchers("/add-trip","/cancel-trip/*","/retrieve-all-reservations","/cancel-reservation/*","/sendMail").hasRole("admin_role")
+                .antMatchers("/retrieve-reservation/*","/cancel-reservation/*","/confirm-reservation/*","/retrieve-employee-reservation/*").hasRole("employee_role")
                 .and()
-                .formLogin();
+                .csrf().disable();
+                
     }
   
     // Function to encode the password

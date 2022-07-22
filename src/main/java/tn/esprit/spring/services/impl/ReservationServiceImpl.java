@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.spring.entities.Reservation;
@@ -20,6 +22,8 @@ import tn.esprit.spring.services.IUserService;
 public class ReservationServiceImpl implements IReservationService {
 	@Autowired
 	ReservationRepository reservationRepository;
+	
+	@Autowired private JavaMailSender javaMailSender;
 
 	private static final Logger l = LogManager.getLogger(EmployeServiceImpl.class);
 	
@@ -36,7 +40,22 @@ public class ReservationServiceImpl implements IReservationService {
 
 	@Override
 	public void cancelReservation(Long id) {
+		Reservation reservation = reservationRepository.findById(id).get();
+		SimpleMailMessage mailMessage
+        = new SimpleMailMessage();
+		
+		mailMessage.setFrom("Reservation");
+        mailMessage.setTo(reservation.getPassenger().getEmail());
+        mailMessage.setText("Bonjour "+reservation.getPassenger().getFirstname()+" "+ reservation.getPassenger().getLastname()+","
+        		+"\n"+"La reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
+        		+" est annulée!");
+        mailMessage.setSubject("Annulation Voyage!");
+        javaMailSender.send(mailMessage);
+        
+        
 	    reservationRepository.deleteById(id);
+	    
+	    
 		
 	}
 
@@ -46,6 +65,19 @@ public class ReservationServiceImpl implements IReservationService {
 		Reservation reservation = reservationRepository.findById(reservationId).get();
 		reservation.setConfirmed(true);
 		r_update = reservationRepository.save(reservation);
+		
+		
+		SimpleMailMessage mailMessage
+        = new SimpleMailMessage();
+		
+		mailMessage.setFrom("Reservation");
+        mailMessage.setTo(reservation.getPassenger().getEmail());
+        mailMessage.setText("Bonjour "+reservation.getPassenger().getFirstname()+" "+ reservation.getPassenger().getLastname()+","
+        		+"\n"+"La reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
+        		+" est confirmé!");
+        mailMessage.setSubject("Confirmation Voyage");
+        javaMailSender.send(mailMessage);
+		
 		return r_update;
 		
 	}
@@ -53,6 +85,16 @@ public class ReservationServiceImpl implements IReservationService {
 	@Override
 	public Reservation retrieveReservation(Long id) {
 		return reservationRepository.findById(id).get();
+	}
+
+	/*@Override
+	public Reservation retrieveEmployeeReservation(Long id) {
+		return reservationRepository.findById(id).
+	}*/
+	
+	@Override
+	public List<Reservation> retrieveEmployeeReservation(Long id) {
+		return (List<Reservation>) reservationRepository.retrieveEmployeeReservation(id);
 	}
 
 }

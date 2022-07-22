@@ -23,6 +23,12 @@ import tn.esprit.spring.services.IUserService;
 public class TripServiceImpl implements ITripService {
 	@Autowired
 	TripRepository tripRepository;
+	
+	@Autowired
+	ReservationRepository reservationRepository;
+	
+	@Autowired
+	private IReservationService reservationService;
 
 	private static final Logger logger = LogManager.getLogger(TripServiceImpl.class);
 	
@@ -54,7 +60,9 @@ public class TripServiceImpl implements ITripService {
 	
 	@Override
 	public void cancelTrip(Long id) {
+		
 		tripRepository.deleteById(id);
+		
 	}
 
 	
