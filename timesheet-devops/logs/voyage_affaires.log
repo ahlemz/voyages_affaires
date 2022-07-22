@@ -1,0 +1,183 @@
+2022-07-22 00:19:37.180  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 3592 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 00:19:37.182  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 00:19:40.529  INFO 3592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 00:19:40.530  INFO 3592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 00:19:40.784  INFO 3592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 00:19:41.165  INFO 3592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 00:19:41.441  INFO 3592 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-22 00:19:41.932  INFO 3592 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-22 00:19:42.550  INFO 3592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 00:19:43.983  INFO 3592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 00:19:44.656  WARN 3592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 00:19:45.765  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 9.276 seconds (JVM running for 11.219)
+2022-07-22 00:20:01.072  INFO 3592 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 00:20:06.381 ERROR 3592 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:289) ~[spring-security-crypto-5.7.2.jar:5.7.2]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:237) ~[spring-security-crypto-5.7.2.jar:5.7.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$LazyPasswordEncoder.matches(AuthenticationConfiguration.java:313) ~[spring-security-config-5.6.3.jar:5.6.3]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:76) ~[spring-security-core-5.7.2.jar:5.7.2]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147) ~[spring-security-core-5.7.2.jar:5.7.2]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.2.jar:5.7.2]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.2.jar:5.7.2]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:156) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2022-07-22 00:20:42.126  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 3592 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 00:20:42.127  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 00:20:42.732  INFO 3592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 00:20:42.733  INFO 3592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 00:20:42.751  INFO 3592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 00:20:42.814  INFO 3592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 00:20:42.825  INFO 3592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 00:20:43.081  INFO 3592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 00:20:43.243  WARN 3592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 00:20:43.377  WARN 3592 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e6a0d283-0ca8-4b72-b73a-af6d75e85f89
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-07-22 00:20:43.443  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 1.366 seconds (JVM running for 68.896)
+2022-07-22 00:20:58.062  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 3592 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 00:20:58.062  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 00:20:58.731  INFO 3592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 00:20:58.731  INFO 3592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 00:20:58.763  INFO 3592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 00:20:58.826  INFO 3592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 00:20:58.841  INFO 3592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 00:20:59.124  INFO 3592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 00:20:59.312  WARN 3592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 00:20:59.454  WARN 3592 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bbf90cb1-96f7-4721-9f37-dbbc9375e33b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-07-22 00:20:59.507  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 1.496 seconds (JVM running for 84.959)
+2022-07-22 00:24:13.939  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 3592 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 00:24:13.939  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 00:24:14.381  INFO 3592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 00:24:14.381  INFO 3592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 00:24:14.395  INFO 3592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 00:24:14.437  INFO 3592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 00:24:14.448  INFO 3592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 00:24:14.591  INFO 3592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 00:24:14.717  WARN 3592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 00:24:14.834  WARN 3592 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 936317a7-d297-48c0-a53d-19cdf2518fbd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-07-22 00:24:14.874  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 0.97 seconds (JVM running for 280.328)
+2022-07-22 00:33:35.731  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 3592 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 00:33:35.731  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 00:33:36.232  INFO 3592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 00:33:36.232  INFO 3592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 00:33:36.243  INFO 3592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 00:33:36.282  INFO 3592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 00:33:36.292  INFO 3592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 00:33:36.460  INFO 3592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 00:33:36.569  WARN 3592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 00:33:36.658  WARN 3592 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f657dfbc-1aec-4797-9329-e57e78954139
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-07-22 00:33:36.692  INFO 3592 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 1.019 seconds (JVM running for 842.145)
+2022-07-22 01:05:23.599  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 13604 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 01:05:23.600  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 01:05:25.788  INFO 13604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 01:05:25.789  INFO 13604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 01:05:25.887  INFO 13604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 01:05:26.160  INFO 13604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 01:05:26.323  INFO 13604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-22 01:05:26.563  INFO 13604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-22 01:05:26.947  INFO 13604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 01:05:27.978  INFO 13604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 01:05:28.523  WARN 13604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 01:05:29.660  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 6.598 seconds (JVM running for 7.817)
+2022-07-22 01:05:45.831  INFO 13604 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 01:06:23.512  INFO 13604 --- [http-nio-8082-exec-4] t.e.s.services.impl.EmployeServiceImpl   : In Method retrieveAllUsers :
+2022-07-22 01:06:23.547  INFO 13604 --- [http-nio-8082-exec-4] t.e.s.services.impl.EmployeServiceImpl   : Out of Method retrieveAllUsers with Success1
+2022-07-22 01:07:11.416  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 13604 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 01:07:11.416  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 01:07:11.886  INFO 13604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 01:07:11.886  INFO 13604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 01:07:11.901  INFO 13604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 01:07:11.945  INFO 13604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 01:07:11.959  INFO 13604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 01:07:12.283  INFO 13604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 01:07:12.420  WARN 13604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 01:07:12.598  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 1.218 seconds (JVM running for 110.755)
+2022-07-22 01:07:16.048  INFO 13604 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 01:07:16.054  INFO 13604 --- [http-nio-8082-exec-2] t.e.s.services.impl.EmployeServiceImpl   : In Method retrieveAllUsers :
+2022-07-22 01:07:16.070  INFO 13604 --- [http-nio-8082-exec-2] t.e.s.services.impl.EmployeServiceImpl   : Out of Method retrieveAllUsers with Success1
+2022-07-22 01:07:19.205  INFO 13604 --- [http-nio-8082-exec-3] t.e.s.services.impl.EmployeServiceImpl   : In Method retrieveAllUsers :
+2022-07-22 01:07:19.212  INFO 13604 --- [http-nio-8082-exec-3] t.e.s.services.impl.EmployeServiceImpl   : Out of Method retrieveAllUsers with Success1
+2022-07-22 01:07:35.170  INFO 13604 --- [http-nio-8082-exec-4] t.e.s.services.impl.EmployeServiceImpl   : In Method retrieveAllUsers :
+2022-07-22 01:07:35.178  INFO 13604 --- [http-nio-8082-exec-4] t.e.s.services.impl.EmployeServiceImpl   : Out of Method retrieveAllUsers with Success1
+2022-07-22 01:13:40.694  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Starting VoyageAffairesApplication using Java 1.8.0_221 on DESKTOP-UL5Q03O with PID 13604 (C:\Work\workspace-sts\Project\PiDev\voyages_affaires\target\classes started by DELL in C:\Work\workspace-sts\Project\PiDev\voyages_affaires)
+2022-07-22 01:13:40.695  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-22 01:13:41.134  INFO 13604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-22 01:13:41.135  INFO 13604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-22 01:13:41.154  INFO 13604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-22 01:13:41.196  INFO 13604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-22 01:13:41.206  INFO 13604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-22 01:13:41.409  INFO 13604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-22 01:13:41.558  WARN 13604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-22 01:13:41.707  INFO 13604 --- [restartedMain] t.e.spring.VoyageAffairesApplication     : Started VoyageAffairesApplication in 1.044 seconds (JVM running for 499.865)
+2022-07-22 01:13:56.725  INFO 13604 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 01:13:56.729  INFO 13604 --- [http-nio-8082-exec-2] t.e.s.services.impl.EmployeServiceImpl   : In Method retrieveAllUsers :
+2022-07-22 01:13:56.745  INFO 13604 --- [http-nio-8082-exec-2] t.e.s.services.impl.EmployeServiceImpl   : Out of Method retrieveAllUsers with Success1

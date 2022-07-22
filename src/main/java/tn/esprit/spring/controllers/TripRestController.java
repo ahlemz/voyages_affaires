@@ -74,9 +74,4 @@ public class TripRestController {
 		tripService.cancelTrip(id);
 	}
 
-	/*@PutMapping("/confirm-reservation")
-	public User updateUser(@RequestBody User user) {
-		return userService.updateUser(user);
-	}*/
-
 }
