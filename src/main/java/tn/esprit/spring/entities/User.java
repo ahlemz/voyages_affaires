@@ -147,6 +147,10 @@ private List<Reclamation> reclamations= new ArrayList<>();
 		return getReclamations();
 	}
 
+	public List<Invitation> getInvitations() {
+		return getInvitations();
+	}
+		
 	public void setReclamations(List<Reclamation> reclamations) {
 		this.reclamations = reclamations;
 	}

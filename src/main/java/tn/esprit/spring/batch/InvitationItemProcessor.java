@@ -14,12 +14,12 @@ public class InvitationItemProcessor implements ItemProcessor<Invitation, Invita
 	
 	public Invitation process(final Invitation invi) throws Exception {
 		final Long id= invi.getId();
-		final Date date_Invitation = invi.getDateInvitation();
+		final Date date_invitation = invi.getDateInvitation();
 		final String confirmation = invi.getConfirmation();
 		final String answer= invi.getAnswer();
 		final String description=invi.getDescription();
 
-		final Invitation transformedInvitation = new Invitation(id,date_Invitation, confirmation,answer,description);
+		final Invitation transformedInvitation = new Invitation(id,date_invitation, confirmation,answer,description);
 
 		log.info("Converting (" + invi + ") into (" + transformedInvitation + ")");
 

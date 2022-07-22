@@ -44,7 +44,7 @@ public class BatchConfiguration {
 	public JdbcBatchItemWriter<Invitation> writer(DataSource dataSource) {
 		return new JdbcBatchItemWriterBuilder<Invitation>()
 			.itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-			.sql("INSERT INTO invitation (id,dateInvitation, confirmationInvitation,answer,description) VALUES (:id,:dateInvitation, :confirmationInvitation,:answer,:description)")
+			.sql("INSERT INTO invitation (id,date_invitation, confirmation,answer,description) VALUES (:id,:dateInvitation, :confirmationInvitation,:answer,:description)")
 			.dataSource(dataSource)
 			.build();
 	}
