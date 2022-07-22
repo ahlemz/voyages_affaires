@@ -11,5 +11,4 @@ public interface IUserService {
 	void deleteUser(Long id);
 	User updateUser(User u);
 	User retrieveUsere(Long id);
-	User loadUserByUsername(String username);
 }

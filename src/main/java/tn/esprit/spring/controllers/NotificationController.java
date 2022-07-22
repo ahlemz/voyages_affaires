@@ -23,8 +23,8 @@ public class NotificationController {
 	@Autowired
 	private MailService notificationService;
 
-	@Autowired
-	private Partner partner;
+//	@Autowired
+//	private Partner partner;
 
 	/**
 	 * 
@@ -37,12 +37,12 @@ public class NotificationController {
 		 * Creating a User with the help of User class that we have declared and setting
 		 * Email address of the sender.
 		 */
-		partner.setEmail("ayoub.benaziza@esprit.tn");  //Receiver's email address
+	//	partner.setEmail("ayoub.benaziza@esprit.tn");  //Receiver's email address
 		/*
 		 * Here we will call sendEmail() for Sending mail to the sender.
 		 */
 		try {
-			notificationService.sendEmail(partner);
+	//		notificationService.sendEmail(partner);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
 		}
