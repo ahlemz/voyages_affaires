@@ -46,10 +46,11 @@ public class ReservationServiceImpl implements IReservationService {
 		
 		mailMessage.setFrom("Reservation");
         mailMessage.setTo(reservation.getPassenger().getEmail());
-        mailMessage.setText("Bonjour "+reservation.getPassenger().getFirstname()+" "+ reservation.getPassenger().getLastname()+","
-        		+"\n"+"La reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
-        		+" est annulée!");
-        mailMessage.setSubject("Annulation Voyage!");
+        mailMessage.setText("Bonjour,"
+        		+"\n\n"+"Vous avez annuler la reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
+        		+" pour "+ reservation.getTodo()+"!"
+        		+"\n\n"+"Cordialement,");
+        mailMessage.setSubject("Annulation Reservation!");
         javaMailSender.send(mailMessage);
         
         
@@ -72,10 +73,12 @@ public class ReservationServiceImpl implements IReservationService {
 		
 		mailMessage.setFrom("Reservation");
         mailMessage.setTo(reservation.getPassenger().getEmail());
-        mailMessage.setText("Bonjour "+reservation.getPassenger().getFirstname()+" "+ reservation.getPassenger().getLastname()+","
-        		+"\n"+"La reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
-        		+" est confirmé!");
-        mailMessage.setSubject("Confirmation Voyage");
+        mailMessage.setText("Bonjour,"
+        		+"\n\n"+"Vous avez confirmer la reservation du voyage de "+reservation.getTrip().getDepartureCity()+" à "+ reservation.getTrip().getArrivalCity()
+        		+" pour "+ reservation.getTodo()+"!"
+        		+"\n"+"Plus de détails vous seront communiqués."
+        		+"\n\n"+"Cordialement,");
+        mailMessage.setSubject("Confirmation Reservation!");
         javaMailSender.send(mailMessage);
 		
 		return r_update;

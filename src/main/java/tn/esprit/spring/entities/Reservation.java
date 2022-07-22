@@ -8,12 +8,22 @@ public class Reservation {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+	
+	private String todo;
 
-    
     private Boolean confirmed=false;
     
 
-    @OneToOne
+    public String getTodo() {
+		return todo;
+	}
+
+
+	public void setTodo(String todo) {
+		this.todo = todo;
+	}
+
+	@OneToOne
     private User user;
     @OneToOne
     private Trip trip;

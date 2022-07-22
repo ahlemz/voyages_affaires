@@ -19,5 +19,8 @@ public interface TripRepository extends  CrudRepository<Trip, Long>, JpaReposito
 	
 	@Query(value = "SELECT * FROM Trip t WHERE t.departure_city=?1 AND t.arrival_city=?2", nativeQuery = true)
     List<Trip> findTripbyDepartAndArrival(@Param("departureCity")String from, @Param("arrivalCity") String to);
+	
+	@Query(value = "SELECT * FROM Trip t, Resevation r WHERE t.id=?1 AND r.trip_id=?1", nativeQuery = true)
+    List<Trip> findTripReservations(@Param("trip_id")Long id);
 
 }

@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
 
@@ -24,11 +25,7 @@ public class TripServiceImpl implements ITripService {
 	@Autowired
 	TripRepository tripRepository;
 	
-	@Autowired
-	ReservationRepository reservationRepository;
 	
-	@Autowired
-	private IReservationService reservationService;
 
 	private static final Logger logger = LogManager.getLogger(TripServiceImpl.class);
 	
@@ -77,6 +74,12 @@ public class TripServiceImpl implements ITripService {
 	@Override
 	public List<Trip> findTripbyDepartAndArrival(String from, String to) {
 		return (List<Trip>) tripRepository.findTripbyDepartAndArrival(from, to);
+	}
+
+
+	@Override
+	public List<Trip> findTripReservations(Long id) {
+		return (List<Trip>) tripRepository.findTripReservations(id);
 	}
 	
 
