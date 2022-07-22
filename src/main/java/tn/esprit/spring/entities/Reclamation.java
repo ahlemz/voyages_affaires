@@ -3,6 +3,7 @@ package tn.esprit.spring.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -36,7 +37,7 @@ public class Reclamation implements Serializable {
 	
 	private boolean actif;
 	
-	@Enumerated(EnumType.STRING)
+	@OneToOne(cascade = CascadeType.ALL)
 	private Role role;
 	 
 	/*@JsonIgnore

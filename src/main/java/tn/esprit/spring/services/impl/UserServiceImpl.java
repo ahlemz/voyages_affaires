@@ -31,7 +31,7 @@ public class UserServiceImpl implements IUserService {
 				user = (List<User>) userRepository.findAll(); 
 				l.debug("connexion à la DB Ok :"); 
 				for (User u : user) {
-					l.debug("User :" + u.getFirstname() ); 
+					l.debug("User :" + u.getUsername() ); 
 				} 
 				l.info("Out of Method retrieveAllUsers with Success" + user.size());
 			}catch (Exception e) {
@@ -91,27 +91,8 @@ public class UserServiceImpl implements IUserService {
 		}
 		return user;
 	}
+
+
 	
-	private List<GrantedAuthority> getGrantedAuthorities(User user) {
-		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		Role role = user.getRole();
-		authorities.add(new SimpleGrantedAuthority(role.toString()));
-		return authorities;
-	}
-
-	@Override
-	public User loadUserByUsername(String username) {
-		if (username.trim().isEmpty()) {
-			System.out.println("username is empty");
-		}
- 
-		User user = userRepository.findByUsernameOrEmail(username);
- 
-		if (user == null) {
-			System.out.println("User " + username + " not found"); 
-		}
-		
-		return new User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user));
-	}
-
 }
+
