@@ -163,7 +163,6 @@ private List<Reclamation> reclamations= new ArrayList<>();
 		this.reclamations = reclamations;
 		this.code = code;
 	}
-
-
+	
 	
 }

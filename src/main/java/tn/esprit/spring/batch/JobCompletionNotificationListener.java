@@ -28,7 +28,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 		if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
 			log.info("!!! JOB FINISHED! Time to verify the results");
 
-			jdbcTemplate.query("SELECT id,dateInvitation, confirmationInvitation,answer,description FROM invitation",
+			jdbcTemplate.query("SELECT id,date-Invitation, confirmation-,answer,description FROM invitation",
 				(rs, row) -> new Invitation(
 					rs.getLong(0), rs.getDate(0), rs.getString(1),
 					rs.getString(2), rs.getString(3))
@@ -36,3 +36,4 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 		}
 	}
 }
+/* id	answer	confirmation	date_invitation	description*/

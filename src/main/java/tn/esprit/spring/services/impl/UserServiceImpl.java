@@ -91,8 +91,28 @@ public class UserServiceImpl implements IUserService {
 		}
 		return user;
 	}
-
+	
+	private List<GrantedAuthority> getGrantedAuthorities(User user) {
+		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+		Role role = (Role) user.getRoles();
+		authorities.add(new SimpleGrantedAuthority(role.toString()));
+		return authorities;
+	}
 
 	
-}
+	@Override
+	public User loadUserByUsername(String username) {
+		if (username.trim().isEmpty()) {
+			System.out.println("username is empty");
+		}
+ 
+		User user = userRepository.findByUsername(username);
+ 
+		if (user == null) {
+			System.out.println("User " + username + " not found"); 
+		}
+		
+		return new User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user));
+	}
 
+}
