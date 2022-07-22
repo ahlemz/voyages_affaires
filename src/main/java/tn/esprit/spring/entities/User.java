@@ -1,8 +1,10 @@
 package tn.esprit.spring.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -64,6 +66,10 @@ public abstract class User implements Serializable {
 
 	@ElementCollection
 	private Set<String> languages;
+	
+	@OneToMany(mappedBy="user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE},
+				fetch=FetchType.LAZY)
+private List<Reclamation> reclamations= new ArrayList<>();
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -136,16 +142,25 @@ public abstract class User implements Serializable {
 	public void setResetPasswordToken(String resetPasswordToken) {
 		this.resetPasswordToken = resetPasswordToken;
 	}
+	
+	public List<Reclamation> getReclamations() {
+		return getReclamations();
+	}
+
+	public void setReclamations(List<Reclamation> reclamations) {
+		this.reclamations = reclamations;
+	}
 
 	public static String getPropertyNameId() {
 		return PROPERTY_NAME_ID;
 	}
-	public User(int id, String username, String email, String password, long code) {
+	public User(int id, String username, String email, String password, long code, List<Reclamation> reclamations) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.password = password;
+		this.reclamations = reclamations;
 		this.code = code;
 	}
 
