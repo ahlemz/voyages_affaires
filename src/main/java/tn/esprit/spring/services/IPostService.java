@@ -11,5 +11,7 @@ public interface IPostService {
 	void deletePost(Long id);
 	Post updatePost(Post po,Long id);
 	Post retrievePost(Long id);
+	int retrieveNbrOfPostsPerDay();
+
 
 } 

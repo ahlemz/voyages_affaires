@@ -125,5 +125,17 @@ public class PostServiceImpl implements IPostService {
 
 		return entr;
 	}
+	
+	public int retrieveNbrOfPostsPerDay() {
+		int count = 0;
+		try {
+			l.info("Start process get number of comments today");
+			count = postRepository.retrieveNbrOfPostsPerDay();
+		} catch (Exception e) {
+			l.error("error in retrieveNbrOfCommentsPerDay() : " + e);
+		}
+		
+		return count; 
+	}
 
 }

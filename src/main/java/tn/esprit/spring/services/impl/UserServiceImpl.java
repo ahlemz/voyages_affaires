@@ -1,12 +1,16 @@
 package tn.esprit.spring.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
+import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.repositories.UserRepository;
 import tn.esprit.spring.services.IUserService;
@@ -14,7 +18,7 @@ import tn.esprit.spring.services.IUserService;
 @Service
 public class UserServiceImpl implements IUserService {
 	@Autowired
-	private UserRepository userRepository;
+	UserRepository userRepository;
 
 	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
 	
@@ -27,7 +31,7 @@ public class UserServiceImpl implements IUserService {
 				user = (List<User>) userRepository.findAll(); 
 				l.debug("connexion à la DB Ok :"); 
 				for (User u : user) {
-					l.debug("User :" + u.getFirstname() ); 
+					l.debug("User :" + u.getUsername() ); 
 				} 
 				l.info("Out of Method retrieveAllUsers with Success" + user.size());
 			}catch (Exception e) {
@@ -88,4 +92,13 @@ public class UserServiceImpl implements IUserService {
 		return user;
 	}
 
+	@Override
+	public User loadUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
 }
+
