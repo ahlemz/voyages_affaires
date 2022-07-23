@@ -21,12 +21,22 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Role implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 @Id
 @Column(name="role_id")
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Integer id;
 @Enumerated(EnumType.STRING)
 private ERole name;
+
+public Role(Integer id, ERole name) {
+	super();
+	this.id = id;
+	this.name = name;
+}
 public Integer getId() {
 	return id;
 }
@@ -39,11 +49,12 @@ public ERole getName() {
 public void setName(ERole name) {
 	this.name = name;
 }
-public Role(Integer id, ERole name) {
-	super();
-	this.id = id;
-	this.name = name;
+
+@Override
+public String toString() {
+	return "Role [id=" + id + ", name=" + name + "]";
 }
+
 
 
 }

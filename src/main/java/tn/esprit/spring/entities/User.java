@@ -41,8 +41,18 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @ToString
 
-public abstract class User implements Serializable {
+public class User implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public User(String username, String email, String password) {
+		super();
+		this.username = username;
+		this.email = email;
+		this.password = password;
+	}
 	public static final String PROPERTY_NAME_ID = "id";
 
 	@Id
@@ -140,13 +150,15 @@ public abstract class User implements Serializable {
 	public static String getPropertyNameId() {
 		return PROPERTY_NAME_ID;
 	}
-	public User(int id, String username, String email, String password, long code) {
+	public User(int id, String username, String email, String phonenumber) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.email = email;
-		this.password = password;
-		this.code = code;
+		this.phoneNumber = phonenumber;
+	}
+	public User() {
+		super();
 	}
 
 
